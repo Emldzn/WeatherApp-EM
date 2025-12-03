@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Weather App</h1>
+      <p>Узнайте погоду в любом городе мира</p>
+    </div>
+    <div class="search-box">
+      <div class="search-flex">
+        <input type="text" id="city-input" placeholder="Введите название города...">
+        <button id="search-button">Поиск</button>
+      </div>
+      <div id="error-message" class="error"></div>
+    </div>
+    <div id="weather-card" class="weather-card hidden">
+      <div class="location">
+        <h2 id="city-name"></h2>
+        <p id="country-name"></p>
+      </div>
+      <div class="main-weather">
+        <div id="weather-icon"></div>
+        <p id="temp"></p>
+        <p id="description"></p>
+        <p id="feels-like"></p>
+      </div>
+      <div class="additional-info">
+        <div class="info-item">
+          <i data-lucide="wind" class="icon"></i>
+          <div>
+            <p class="label">Ветер</p>
+            <p id="wind-speed"></p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i data-lucide="droplets" class="icon"></i>
+          <div>
+            <p class="label">Влажность</p>
+            <p id="humidity"></p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i data-lucide="cloud-rain" class="icon"></i>
+          <div>
+            <p class="label">Осадки</p>
+            <p id="precipitation"></p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i data-lucide="gauge" class="icon"></i>
+          <div>
+            <p class="label">Направление</p>
+            <p id="wind-direction"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Powered by Open-Meteo API</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
